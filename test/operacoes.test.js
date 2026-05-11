@@ -88,6 +88,16 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   test('38. deve converter Celsius para Fahrenheit', () => { expect(celsiusParaFahrenheit(0)).toBe(32); });
   test('39. deve converter Fahrenheit para Celsius', () => { expect(fahrenheitParaCelsius(32)).toBe(0); });
   test('40. deve calcular o inverso de um número', () => { expect(inverso(4)).toBe(0.25); });
+  test('40b. deve lançar erro para inverso de zero', () => { expect(() => inverso(0)).toThrow(); });
+  test('38b. deve converter Celsius para Fahrenheit com valor não-zero', () => {
+    expect(celsiusParaFahrenheit(10)).toBe(50);
+    expect(celsiusParaFahrenheit(100)).toBe(212);
+  });
+  test('38c. deve converter Fahrenheit para Celsius corretamente', () => {
+    expect(fahrenheitParaCelsius(212)).toBeCloseTo(100);
+    expect(fahrenheitParaCelsius(0)).toBeCloseTo(-17.78, 1);
+  });
+  test('36d. deve retornar max quando valor igual a max', () => { expect(clamp(10, 0, 10)).toBe(10); });
 
   // === Testes para o Bloco 5 (41-50) ===
   test('41. deve calcular a área de um círculo', () => { expect(areaCirculo(10)).toBeCloseTo(314.159); });
@@ -107,6 +117,12 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   });
   test('47c. deve calcular a mediana de um array desordenado', () => {
     expect(medianaArray([5, 1, 3])).toBe(3);
+  });
+  test('47d. deve lançar erro para array vazio', () => { 
+    expect(() => medianaArray([])).toThrow('Array vazio не possui mediana.');
+  });
+  test('40c. deve lançar erro com mensagem específica para inverso de zero', () => {
+    expect(() => inverso(0)).toThrow('Não é possível inverter o número zero.');
   });
   test('48. deve calcular o dobro de um número', () => { expect(dobro(10)).toBe(20); });
   test('49. deve calcular o triplo de um número', () => { expect(triplo(10)).toBe(30); });

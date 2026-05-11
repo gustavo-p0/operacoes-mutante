@@ -32,6 +32,10 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   test('13. deve retornar o valor absoluto de um número negativo', () => { expect(valorAbsoluto(-5)).toBe(5); });
   test('14. deve arredondar um número para cima', () => { expect(arredondar(9.8)).toBe(10); });
   test('15. deve retornar true para um número par', () => { expect(isPar(100)).toBe(true); });
+  test('15b. deve retornar false para um número ímpar', () => {
+    expect(isPar(3)).toBe(false);
+    expect(isPar(1)).toBe(false);
+  });
   test('16. deve retornar true para um número ímpar', () => { expect(isImpar(7)).toBe(true); });
   test('17. deve calcular uma porcentagem simples', () => { expect(calcularPorcentagem(50, 200)).toBe(100); });
   test('18. deve aumentar um valor em uma porcentagem', () => { expect(aumentarPorcentagem(100, 10)).toBeCloseTo(110); });

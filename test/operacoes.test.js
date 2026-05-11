@@ -73,6 +73,8 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
     expect(isPrimo(2)).toBe(true);
   });
   test('34. deve calcular o 10º termo de Fibonacci', () => { expect(fibonacci(10)).toBe(55); });
+  test('34b. deve retornar 0 para fibonacci(0)', () => { expect(fibonacci(0)).toBe(0); });
+  test('34c. deve retornar 1 para fibonacci(1)', () => { expect(fibonacci(1)).toBe(1); });
   test('35. deve calcular o produto de um array', () => { expect(produtoArray([2, 3, 4])).toBe(24); });
   test('36. deve manter um valor dentro de um intervalo (clamp)', () => { expect(clamp(5, 0, 10)).toBe(5); });
   test('36b. deve retornar o minimo quando valor abaixo do intervalo', () => {

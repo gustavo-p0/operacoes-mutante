@@ -93,6 +93,8 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   test('42. deve calcular a área de um retângulo', () => { expect(areaRetangulo(5, 4)).toBe(20); });
   test('43. deve calcular o perímetro de um retângulo', () => { expect(perimetroRetangulo(5, 4)).toBe(18); });
   test('44. deve verificar se um número é maior que outro', () => { expect(isMaiorQue(10, 5)).toBe(true); });
+  test('44b. deve retornar false quando a < b', () => { expect(isMaiorQue(5, 10)).toBe(false); });
+  test('44c. deve retornar false quando a === b', () => { expect(isMaiorQue(5, 5)).toBe(false); });
   test('45. deve verificar se um número é menor que outro', () => { expect(isMenorQue(5, 10)).toBe(true); });
   test('46. deve verificar se dois números são iguais', () => { expect(isEqual(7, 7)).toBe(true); });
   test('47. deve calcular a mediana de um array ímpar e ordenado', () => { expect(medianaArray([1, 2, 3, 4, 5])).toBe(3); });

@@ -84,6 +84,7 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
     expect(clamp(15, 0, 10)).toBe(10);
   });
   test('37. deve verificar se um número é divisível por outro', () => { expect(isDivisivel(10, 2)).toBe(true); });
+  test('37b. deve retornar false quando nao e divisivel', () => { expect(isDivisivel(10, 3)).toBe(false); });
   test('38. deve converter Celsius para Fahrenheit', () => { expect(celsiusParaFahrenheit(0)).toBe(32); });
   test('39. deve converter Fahrenheit para Celsius', () => { expect(fahrenheitParaCelsius(32)).toBe(0); });
   test('40. deve calcular o inverso de um número', () => { expect(inverso(4)).toBe(0.25); });

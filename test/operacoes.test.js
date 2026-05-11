@@ -96,6 +96,12 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   test('45. deve verificar se um número é menor que outro', () => { expect(isMenorQue(5, 10)).toBe(true); });
   test('46. deve verificar se dois números são iguais', () => { expect(isEqual(7, 7)).toBe(true); });
   test('47. deve calcular a mediana de um array ímpar e ordenado', () => { expect(medianaArray([1, 2, 3, 4, 5])).toBe(3); });
+  test('47b. deve calcular a mediana de um array par', () => {
+    expect(medianaArray([1, 2, 3, 4])).toBe(2.5);
+  });
+  test('47c. deve calcular a mediana de um array desordenado', () => {
+    expect(medianaArray([5, 1, 3])).toBe(3);
+  });
   test('48. deve calcular o dobro de um número', () => { expect(dobro(10)).toBe(20); });
   test('49. deve calcular o triplo de um número', () => { expect(triplo(10)).toBe(30); });
   test('50. deve calcular a metade de um número', () => { expect(metade(20)).toBe(10); });

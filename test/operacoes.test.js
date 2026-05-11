@@ -65,6 +65,12 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   test('34. deve calcular o 10º termo de Fibonacci', () => { expect(fibonacci(10)).toBe(55); });
   test('35. deve calcular o produto de um array', () => { expect(produtoArray([2, 3, 4])).toBe(24); });
   test('36. deve manter um valor dentro de um intervalo (clamp)', () => { expect(clamp(5, 0, 10)).toBe(5); });
+  test('36b. deve retornar o minimo quando valor abaixo do intervalo', () => {
+    expect(clamp(-5, 0, 10)).toBe(0);
+  });
+  test('36c. deve retornar o maximo quando valor acima do intervalo', () => {
+    expect(clamp(15, 0, 10)).toBe(10);
+  });
   test('37. deve verificar se um número é divisível por outro', () => { expect(isDivisivel(10, 2)).toBe(true); });
   test('38. deve converter Celsius para Fahrenheit', () => { expect(celsiusParaFahrenheit(0)).toBe(32); });
   test('39. deve converter Fahrenheit para Celsius', () => { expect(fahrenheitParaCelsius(32)).toBe(0); });

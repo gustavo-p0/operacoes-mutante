@@ -99,6 +99,7 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   test('45b. deve retornar false quando a > b', () => { expect(isMenorQue(10, 5)).toBe(false); });
   test('45c. deve retornar false quando a === b', () => { expect(isMenorQue(5, 5)).toBe(false); });
   test('46. deve verificar se dois números são iguais', () => { expect(isEqual(7, 7)).toBe(true); });
+  test('46b. deve retornar false quando valores sao diferentes', () => { expect(isEqual(7, 8)).toBe(false); });
   test('47. deve calcular a mediana de um array ímpar e ordenado', () => { expect(medianaArray([1, 2, 3, 4, 5])).toBe(3); });
   test('47b. deve calcular a mediana de um array par', () => {
     expect(medianaArray([1, 2, 3, 4])).toBe(2.5);

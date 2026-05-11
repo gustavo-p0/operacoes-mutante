@@ -37,6 +37,10 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
     expect(isPar(1)).toBe(false);
   });
   test('16. deve retornar true para um número ímpar', () => { expect(isImpar(7)).toBe(true); });
+  test('16b. deve retornar false para um número par', () => {
+    expect(isImpar(4)).toBe(false);
+    expect(isImpar(0)).toBe(false);
+  });
   test('17. deve calcular uma porcentagem simples', () => { expect(calcularPorcentagem(50, 200)).toBe(100); });
   test('18. deve aumentar um valor em uma porcentagem', () => { expect(aumentarPorcentagem(100, 10)).toBeCloseTo(110); });
   test('19. deve diminuir um valor em uma porcentagem', () => { expect(diminuirPorcentagem(100, 10)).toBeCloseTo(90); });

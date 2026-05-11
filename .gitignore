@@ -3,4 +3,6 @@ coverage/
 package-lock.json
 # stryker temp files
 .stryker-tmp
-reports/
+.DS_Store
+agent-telemetry-*.jsonl
+generate_report.py

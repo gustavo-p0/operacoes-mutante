@@ -62,6 +62,16 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   test('31. deve calcular o MDC de dois números', () => { expect(mdc(10, 5)).toBe(5); });
   test('32. deve calcular o MMC de dois números', () => { expect(mmc(10, 5)).toBe(10); });
   test('33. deve verificar que um número é primo', () => { expect(isPrimo(7)).toBe(true); });
+  test('33b. deve retornar false para n=1 e n=0', () => {
+    expect(isPrimo(1)).toBe(false);
+    expect(isPrimo(0)).toBe(false);
+  });
+  test('33c. deve retornar false para numero composto', () => {
+    expect(isPrimo(4)).toBe(false);
+  });
+  test('33d. deve retornar true para n=2', () => {
+    expect(isPrimo(2)).toBe(true);
+  });
   test('34. deve calcular o 10º termo de Fibonacci', () => { expect(fibonacci(10)).toBe(55); });
   test('35. deve calcular o produto de um array', () => { expect(produtoArray([2, 3, 4])).toBe(24); });
   test('36. deve manter um valor dentro de um intervalo (clamp)', () => { expect(clamp(5, 0, 10)).toBe(5); });
